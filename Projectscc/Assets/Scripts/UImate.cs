@@ -3,7 +3,7 @@ using System.Collections;
 using DG.Tweening;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
-using UnityEditor;
+
 
 public class UImate : MonoBehaviour {
 
@@ -12,6 +12,8 @@ public class UImate : MonoBehaviour {
     private Material mat;
 
     private Texture[] maps;
+
+    public Image im;
 
     void Update()
     {
@@ -35,15 +37,18 @@ public class UImate : MonoBehaviour {
                     string aa=  maps[i].name;
                     if (Imgname.Equals(aa))
                      {
-                         mat.SetTexture(Imgname, maps[i]);
+                        mat.SetTexture(Imgname, maps[i]);
 
                         mat.mainTexture = maps[i];
 
-
+                        
                      }
                      
                  
                 }
+
+
+
 
 
 

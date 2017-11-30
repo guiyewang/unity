@@ -6,10 +6,10 @@ public class test : MonoBehaviour
 {
 
     public Transform target;     //旋转物体
-    private int MouseWheelSensitivity = 1;
-    private int MouseZoomMin = 1; //视角最大最小值
-    private int MouseZoomMax = 4;
-    private float normalDistance = 2; //初始位置距离大小
+    private int MouseWheelSensitivity = 20;//滚轮快慢
+    private int MouseZoomMin = 4; //视角最大最小值
+    private int MouseZoomMax = 10;
+    private float normalDistance = 5; //初始位置距离大小
 
     private Vector3 normalized;
 
