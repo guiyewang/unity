@@ -74,7 +74,7 @@ public class CameraRay : MonoBehaviour {
 
 
                 DOTween.To(() => sf, sa => sf = sa, 1, 2);
-                DOTween.To(() => dhy, sa => dhy = sa, Sh / 5*4, 2);
+                DOTween.To(() => dhy, sa => dhy = sa, Sh / 5*3, 2);
                 DOTween.To(() => dhx, xa => dhx = xa, jbx, 2);
     
                 print(Input.mousePosition);
