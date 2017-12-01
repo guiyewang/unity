@@ -21,6 +21,10 @@ public class CameraRay : MonoBehaviour {
     private float DJy;
 
     private float bianhua;
+    public Sprite[] sp;
+
+
+   
 
     //private Color Acol;
 
@@ -57,7 +61,7 @@ public class CameraRay : MonoBehaviour {
                 DJy = Input.mousePosition.y;
 
                 sf = 0;
-                print(rs.transform.name);
+             
                 if (DJw < (Sw / 2))
                    {
                     jbx = Sw / 6;
@@ -77,12 +81,30 @@ public class CameraRay : MonoBehaviour {
                 DOTween.To(() => dhy, sa => dhy = sa, Sh / 5*3, 2);
                 DOTween.To(() => dhx, xa => dhx = xa, jbx, 2);
     
-                print(Input.mousePosition);
+               // print(Input.mousePosition);
 
 
                 DOTween.To(() => bianhua, xa => bianhua = xa, 2, 3);
 
-               
+                //替换img图片
+                him();
+                print(2);
+
+
+                for (int i = 0; i < sp.Length; i++)
+                {
+                 
+
+                    if (rs.transform.name.Equals(sp[i].name))
+                    {
+                    
+                        img.sprite = sp[i];
+                    }
+                }
+
+
+
+
             }
 
 
@@ -100,7 +122,6 @@ public class CameraRay : MonoBehaviour {
     }
 
 
-
     public void shouhui()
     {
         if(bianhua >= 2)
@@ -112,5 +133,13 @@ public class CameraRay : MonoBehaviour {
     }
 
 
+    /// <summary>
+    /// 获取Img图片
+    /// </summary>
+    /// 
+    private void him()
+    {
+        sp = Resources.LoadAll<Sprite>("Textures");
+    }
 
 }
